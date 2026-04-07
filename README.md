@@ -139,9 +139,5 @@ The application maintains **persistent case memory/state** so the conversation a
 
 ## Screenshots
 
-Add a screenshot of the app here.
-
 Example:
-
-```md
 ![SOC Shiftmate Screenshot](./screenshots/soc-shiftmate-ui.png)
