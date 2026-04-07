@@ -9,6 +9,28 @@ Replace the default starter interface with a cybersecurity-oriented dashboard. T
 ## Server implementation prompt
 Convert the generic starter assistant into a SOC handoff assistant. Add persistent case state with fields for severity, status, owner, affected assets, indicators, actions taken, open questions, next steps, timeline, and a saved handoff report. Extract structured incident facts from the analyst’s latest chat message, save them into persistent case state, and generate a final handoff report from the saved case snapshot.
 
+## Structured extraction prompt
+Extract SOC incident facts from the analyst’s latest message.
+
+Fields to extract when present:
+- case title
+- severity
+- status
+- owner
+- affected assets
+- indicators
+- actions taken
+- open questions
+- next steps
+- timeline entry
+- latest summary
+
+Rules:
+- only extract facts that are explicitly stated or strongly implied
+- do not invent missing values
+- keep arrays concise
+- if the analyst is only asking for a handoff report, return an empty object
+
 ## Runtime system prompt
 You are SOC Shiftmate, a SOC analyst handoff assistant.
 
